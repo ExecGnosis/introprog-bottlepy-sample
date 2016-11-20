@@ -1,0 +1,478 @@
+/* Scrollbar */
+
+::-webkit-scrollbar{width: 6px;}
+
+::-webkit-scrollbar-thumb{background-color:rgb(156, 37, 186); border-radius: 5;}
+::-webkit-scrollbar-thumb:hover{background-color:rgb(102, 31, 102);}
+
+::-webkit-scrollbar-track{background-color:rgb(222, 104, 218);}
+
+
+/* Page Background Image */
+#background{
+  z-index: -1;
+  left: 0;
+  top: 0;
+  background-color: #7C3D91;
+  background: url("/image/bg.jpg") no-repeat center center fixed;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Bootstrap Carousel */
+#myCarousel {
+  position: relative;
+  top: 180px;
+  margin-left: -360px;
+  left:50%;
+  height: 480px;
+  width: 720;/*360px;*/
+  border: solid 1px #000;
+  text-align: center;
+}
+
+#myCarousel .first{
+  background-color: #FFBB00;
+  border-bottom: solid 1px #000;/* Carousel bootstrap border bug FIX */
+}
+
+#myCarousel .second{
+  background-color: #7C3D91;
+  border-bottom: solid 1px #000;/* Carousel bootstrap border bug FIX */
+}
+
+#myCarousel .third{
+  background-color: #FF0000;
+  border-bottom: solid 1px #000;/* Carousel bootstrap border bug FIX */
+}
+
+/* Top Bar */
+#topBar{
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 68px;
+  position: fixed;
+  color: #000;
+  background-color: #474164;
+  border-bottom: 4px solid #595473;
+}
+
+#topBar .logo {
+  position: relative;
+  left: 80px;
+}
+
+#topBar .logo span{
+  font-family: 'Pacifico', cursive;
+  color: #ED145A;
+  font-size: 28px;
+  vertical-align: middle;
+}
+
+/* Page Content */
+#mainForm {
+  background-color: #fff;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  top: 270px;
+
+  border-top: 8px solid #595473;
+  margin-bottom: 80px;
+  border-bottom: 8px solid #595473;
+
+  height: 600px;
+}
+
+/* Main Form Content */
+#content-1 {
+  position: absolute;
+  top: 15px;
+  width: 50%;
+  height: 550px;
+  border-right: solid 3px #000;
+  padding: 10px;
+  text-align: center;
+  overflow-y: auto;
+  direction:rtl;
+}
+
+#content-2 {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  width: 50%;
+  height: 550px;
+  padding: 10px;
+  text-align: center;
+  direction:rtl;
+}
+
+#content-2 p {
+  margin-bottom: 60px;
+}
+
+#picture-1 {
+  position: relative;
+  top: 50px;
+  /*margin-right: 30px;*/
+  border: solid 2px #223344;
+  width: 300px;
+  height: 300px;
+  margin: 3px;
+}
+
+#picture-2 {
+  position: relative;
+  top: 50px;
+  border: solid 2px #223344;
+  width: 300px;
+  height: 300px;
+  margin: 3px;
+}
+
+/* Footer */
+#footer{
+  position: relative;
+  top: 190px;
+  height:80px;
+  background-color: #000;
+  color: #FFF;
+}
+
+#footer img{
+  -webkit-filter: invert(100%); filter: invert(100%);
+  width: 48px;
+  height: 70px;
+  margin-top: 5px;
+}
+
+#footer .copyright{
+  position: relative;
+  left: 100%;
+  width: 450px;
+  margin-left: -458px;
+}
+
+/* Error 404 */
+#error404 {
+  position: absolute;
+  background-color: white;
+  border-bottom: solid 16px #7C3D91;
+  width: 800px;
+  height: 600px;
+  left: 50%;
+  top: 50%;
+  margin-left: -400px;
+  margin-top: -300px;
+}
+
+#error404 h1 {
+  font-size: 160px;
+}
+
+#error404 img {
+  position: relative;
+  left:50%;
+  width: 256px;
+  height: 256px;
+  margin-left: -128px;
+  top: 30px;
+}
+
+#error404 img:hover{
+  cursor:pointer;
+}
+
+/* Daily Horoscope */
+
+#horoscopeContent {
+  position: absolute;
+  background-color: white;
+  border-bottom: solid 16px #7C3D91;
+  width: 800px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  margin-left: -400px;
+  margin-top: -200px;
+}
+
+@keyframes colorFade {
+    from {filter: grayscale(100%);}
+    to {filter: grayscale(0%);}
+}
+
+#horoscopeContent a {
+  text-decoration: none;
+}
+
+#horoscopeContent a:hover {
+  text-decoration: none;
+}
+
+#horoscopeContent img {
+  filter: grayscale(100%);
+}
+
+#horoscopeContent img:hover {
+  animation-name: colorFade;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+/* Specific Horoscope */
+
+#signContent {
+  position: absolute;
+  background-color: white;
+  border-bottom: solid 16px #7C3D91;
+  width: 800px;
+  height: 550px;
+  left: 50%;
+  top: 50%;
+  margin-left: -400px;
+  margin-top: -275px;
+}
+
+#signContent img{
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#signContent h1{
+  font-size: 70px;
+}
+
+#signContent h3{
+  display: block;
+}
+
+/* Theme Content */
+
+#themeContent {
+  position: absolute;
+  background-color: white;
+  border-bottom: solid 16px #7C3D91;
+  width: 800px;
+  min-height: 520px;
+  left: 50%;
+  top: 50%;
+  margin-left: -400px;
+  margin-top: -260px;
+}
+
+/* Control Panel*/
+
+#cpanel {
+  position: absolute;
+  background-color: white;
+  border-bottom: solid 16px #7C3D91;
+  width: 800px;
+  height: 700px;
+  left: 50%;
+  top: 50%;
+  margin-left: -400px;
+  margin-top: -300px;
+}
+
+#topBarText {
+  position: absolute;
+  right: 80px;
+  top: 18px;
+  font-size: 22px;
+}
+
+#topBarText a{
+  text-decoration: none;
+  margin-left: 15px;
+  color: #ED145A;
+}
+
+#topBarText a:hover{
+  color: #BA1349;
+}
+
+#welcomeMessage {
+  padding-right: 15px;
+  border-right: 1px solid #000;
+}
+
+#cpanel h1{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+#cpanelContent h3{
+  border-bottom: 1px #000 solid;
+}
+
+#clearDate {
+  position: relative;
+  top: 4px;
+}
+
+#signSelect {
+  width: 130px;
+  display: inline;
+}
+
+#dayText {
+  width: 300px;
+  margin-top: 15px;
+  resize: none;
+}
+
+#videoURL {
+  width: 400px;
+  display: inline;
+  margin-left: 10px;
+}
+
+#sendAttForm {
+  position: static;
+  display: block;
+  margin-top: 45px;
+  font-size: 40px;
+  width: auto;
+}
+
+/* Login Button */
+.btn {
+  position: absolute;
+  right: 80px;
+  top: 16px;
+  background: #6b2d75;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  border: solid #700070 1px;
+  text-decoration: none;
+  width: 100px;
+}
+
+.btn:hover {
+  background: #8a0281;
+  text-decoration: none;
+  color: white;
+}
+
+/* Login Field */
+
+#loginBox {
+  background-color: #fff;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  border-top-right-radius: 11px;
+  border-top-left-radius: 11px;
+}
+
+#loginHeader {
+  margin-bottom: 60px;
+  background-color: purple;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  font-size: 55px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+  border-bottom: solid 8px #700070;
+}
+
+#send {
+  position: relative;
+  width: 100%;
+  /*height: 60px;*/
+  margin-top: 60px;
+  left: 0px;
+  border-width: 0px;
+  border-top-width: 8px;
+  /*margin-bottom: -30px;*/
+  font-size: 40px;
+}
+
+.login {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 10px 20px;
+  border-width: 0px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  font: normal 16px/normal "Lucida Console", Monaco, monospace;
+  color: rgba(255,255,255,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #9b59b6;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.5) ;
+  margin-top: 15px;
+  text-align: center;
+
+  width: 200px;
+}
+
+.login:hover{
+  box-shadow: 0px 0px 5px purple;
+}
+
+.login:focus{
+  box-shadow: 0px 0px 5px purple;
+}
+
+/* jQuery UI Hack */
+.ui-datepicker-trigger {
+cursor: pointer;
+}
+
+/* Customize Carousel */
+.carousel-caption {
+  position: absolute;
+  max-width: 360px;
+  max-height: 480px;
+  width: 360px;
+  height: 480px;
+  margin-left: 360px;
+  margin-top: 120px;
+  left: 0;
+  top:0;
+}
+
+.carousel-caption a{
+  text-decoration:none;
+  color: white;
+}
+
+.carousel-caption a:hover{
+  text-decoration:none;
+  color: white;
+}
+
+.carousel-caption h1 {
+  font-size: 100px;
+}
+
+h2 {
+  font-size: 65px;
+}
